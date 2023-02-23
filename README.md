@@ -1,9 +1,10 @@
-# backend-interview-question
+<h2> 📚참고자료 </h2>
 
+<a href="https://github.com/BACKEND-CS/backend-interview-question/blob/main/TMI/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%20%EC%A7%88%EB%AC%B8%20TMI.md">네트워크 내용 관련 TMI 정리본</a>
 
 
 <details>
-  <summary><h1> 네트워크 </h1></summary>
+  <summary><h2> 📡네트워크 </h2> </summary>
   
   <details>
   <summary> 웹 통신의 큰 흐름: https://www.google.com/ 을 접속할 때 일어나는 일</summary>
