@@ -15,7 +15,7 @@
     
   </details>
   
-   <details>
+  <details>
   <summary> TCP와 UDP의 차이점에 대해서 설명해보세요.</summary>
   
     - TCP
@@ -34,31 +34,38 @@
 
   </details>
   
-   <details>
+  <details>
   <summary> TCP 3, 4 way handshake에 대해서 설명해보세요.</summary>
   
+    TCP 3way handshake는 SYN, ACK 패킷을 주고받으며 가상회선을 수립하는 단계입니다. 
+    클라이언트는 서버에 요청을 전송할 수 있는지, 서버는 클라이언트에게 응답을 전송할 수 있는지 확인하는 과정입니다. 
     
-     내용   
-
+    TCP 4way handshake는 ACK, FIN 패킷을 주고받으며, TCP연결을 해제하는 단계입니다.
+    단, 서버에서 소켓이 닫혔다고 통지해도 클라이언트 측에서는 일정시간 대기하는데, 혹시나 패킷이 나중에 도착할 수 있기 때문입니다.
+    
   </details>
   
-   <details>
+  <details>
   <summary> HTTP와 HTTPS의 차이점에 대해서 설명해보세요.</summary>
-  
-    
-     내용   
+ 
+    HTTP와 HTTPS 모두 인터넷 상에서 클라이언트와 서버가 자원을 주고 받을 때 쓰는 통신 규약입니다.
+    HTTP 암호화되지 않은 텍스트 교환이고, HTTPS는 TLS/SSL 프로토콜을 사용해 데이터를 암호화하여 통신합니다.
 
   </details>
   
-   <details>
+  <details>
   <summary> SSL Handshake에 대해서 설명해보세요.</summary>
   
-    
-     내용   
+    1. 클라이언트는 TCP 3-way handshake를 수행한 이후 데이터 전송합니다.
+    2. 서버는 SSL 인증서 보냅니다.
+    3. 클라이언트는 받은 SSL 인증서를 인증기관에 검증합니다.
+    4. 클라이언트는 서버의 공개키를 얻을 수 있습니다.
+    5. 클라이언트가 서버의 공개키로 대칭키를 암호화해서 서버에 보냅니다.
+    6. 서버는 이를 개인키로 복호화하고 이후 통신은 공유된 대칭키로 암호화되어 통신합니다.
 
   </details>
   
-   <details>
+  <details>
   <summary> HTTP 메서드와 이것이 하는 역할에 대해서 설명해보세요.</summary>
   
     
