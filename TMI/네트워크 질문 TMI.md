@@ -1,6 +1,12 @@
+# 목차
 
+1. [도메인 주소를 입력하면 일어나는 일](#도메인-주소를-입력하면-일어나는-일)
+2. [TCP와 UDP의 특징](#tcp와-udp의-특징)
+3. [TCP 3 way 와 4 way handshake](#tcp-3-way-와-4-way-handshake)
+4. [HTTP 와 HTTPS 의 차이점](#http-와-https-의-차이점)
+5. [Https SSL Handshake란](#https-ssl-handshake란)
 
-## Https://www.google.com/ 을 접속할 때 일어나는 일
+## 도메인 주소를 입력하면 일어나는 일
 
 <br>
 
@@ -80,7 +86,7 @@ UDP는 비연결형 프로토콜입니다.
 
 <br>
 
-## TCP 3-way / 4-way handshake
+## TCP 3 way 와 4 way handshake
 
 <img src="https://raw.githubusercontent.com/buinq/imageServer/main/img/image-20230222220547314.png" alt="image-20230222220547314" style="zoom:125%;" />
 
