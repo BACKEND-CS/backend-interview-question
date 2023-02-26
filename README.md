@@ -73,6 +73,43 @@
      내용   
 
   </details>
+  
+  <details>
+  <summary> RESTful, REST에 관한 설명</summary>
+  
+    
+     내용   
+
+  </details>
+
+  <details>
+  <summary> OSI 7계층과 존재 이유</summary>
+  
+    
+     내용   
+
+  </details>
+  <details>
+  <summary> TCP/IP 4계층</summary>
+  
+    
+     내용   
+
+  </details>
+  <details>
+  <summary> 웹 서버 소프트웨어(Apache, Nginx)는 OSI 7계층 중 어디서 작동하는지 설명해보세요.</summary>
+  
+    
+     내용   
+
+  </details>
+  <details>
+  <summary> Blocking/Non-blocking & Synchronous/Asynchronous</summary>
+  
+    
+     내용   
+
+  </details>
  
 </details>
 
