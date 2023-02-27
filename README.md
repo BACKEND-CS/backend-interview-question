@@ -120,9 +120,25 @@
  <summary><h2> 📳데이터베이스 </h2> </summary>
 
   <details>
-  <summary> Blocking/Non-blocking & Synchronous/Asynchronous</summary>
+  <summary> 데이터베이스에서 인덱스를 사용하는 이유 및 장단점에 대해 설명해주세요.</summary>
      
   </details>
+  
+  <details>
+  <summary> 트랜잭션에 대해서 설명해주세요.</summary>
+     
+  </details>
+  
+  <details>
+  <summary> 트랜잭션 격리 수준(Transaction Isolation Levels)에 대해서 설명해주세요.</summary>
+     
+  </details>
+  
+  <details>
+  <summary> 정규화에 대해서 설명해주세요.</summary>
+     
+  </details>
+  
  </details>
 
 
