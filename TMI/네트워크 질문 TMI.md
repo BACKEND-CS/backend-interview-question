@@ -191,7 +191,7 @@ SSL handshake 는 단점을 보안하기위해, 대칭키 방식과 비대칭키
 
 <br>
 
-HTTP 메서드는 대표적으로 GET · POST · PUT · DELETE · PATCH가 있고, HEAD · OPTIONS · CONNECT · TRACE 총 8개의 메서드가 있습니다.
+HTTP 메서드는 대표적으로 GET · POST · PUT · DELETE · PATCH가 있고, HEAD · OPTIONS · CONNECT · TRACE 총 9개의 메서드가 있습니다.
 
 > HEAD : GET과 동일하지만 메시지 부분을 제외하고 상태 줄과 헤더만 반환
 >
