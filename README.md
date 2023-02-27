@@ -117,6 +117,16 @@
 </details>
 
  <details>
+ <summary><h2> 📳데이터베이스 </h2> </summary>
+
+  <details>
+  <summary> Blocking/Non-blocking & Synchronous/Asynchronous</summary>
+     
+  </details>
+ </details>
+
+
+ <details>
  <summary><h2> 📳운영체제 </h2> </summary>
 
   <details>
