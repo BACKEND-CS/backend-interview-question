@@ -116,7 +116,7 @@
 
 </details>
 
- <details>
+<details>
  <summary><h2> 📳데이터베이스 </h2> </summary>
 
   <details>
@@ -130,6 +130,11 @@
   </details>
   
   <details>
+  <summary> ACID에 대해서 설명해주세요.</summary>
+     
+  </details>
+  
+  <details>
   <summary> 트랜잭션 격리 수준(Transaction Isolation Levels)에 대해서 설명해주세요.</summary>
      
   </details>
@@ -139,7 +144,7 @@
      
   </details>
   
- </details>
+</details>
 
 
  <details>
