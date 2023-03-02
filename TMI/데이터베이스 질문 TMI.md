@@ -129,8 +129,6 @@ ACID는 트랜잭션이 안전하게 수행된다는 것을 보장하기 위한 
     
     트랜잭션 수행이 완료되어 commit이 이루어진 트랜잭션만 다른 트랜잭션에서 조회가 가능한 수준
     
-    ex) 트랜잭션1이 A라는 데이터를 B로 변경하는 동안 트랜잭션2는 해당 데이터에 접근이 불가능하다.
-    
     ➖ Non Repeatable Read, Phantom Read 발생 가능
     
 3. **Repeatable Read(Level 2)**
