@@ -190,6 +190,27 @@
      
   </details>
   
+  <details>
+  <summary> JOIN에 대해서 설명해주세요.</summary>
+     
+  </details>
+  
+  <details>
+  <summary> RDBMS vs NOSQL에 대해서 설명해주세요.</summary>
+     
+  </details>
+  
+  <details>
+  <summary> Redis에 대해서 간단히 설명해주세요.</summary>
+     
+  </details>
+  
+  <details>
+  <summary> Redis와 Memcached의 차이에 대해서 설명해주세요.</summary>
+     
+     
+  </details>
+  
 </details>
 
 
