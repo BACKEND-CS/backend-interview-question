@@ -193,21 +193,51 @@
   <details>
   <summary> JOIN에 대해서 설명해주세요.</summary>
      
+      조인은 한 테이블의 primary key로 사용되는 column을 기준으로 두 개의 테이블을 서로 묶어서 하나의 결과를 만들어 내는 것을 말합니다.
+
+    - INNER JOIN(내부 조인)은 두 테이블에 모두 있는 행들만
+    - OUTER JOIN(외부 조인)은 기준 테이블에 있는 모든 행들을 가져오고,
+    - CROSS JOIN(상호 조인)은 모든 행을 가져옵니다.
+    - SELF JOIN(자체 조인)은 자신이 자신과 조인한다는 의미로, 1개의 테이블을 사용합니다.
+     
   </details>
   
   <details>
   <summary> RDBMS vs NOSQL에 대해서 설명해주세요.</summary>
+     
+     RDBMS는 관계형 데이터 베이스로 행과 열로 이루어진 테이블에 데이터를 저장하고, 테이블간의 관계를 만들 수 있습니다. 
+     테이블에 정해진 스키마에 따라 데이터를 저장해야 하고, SQL을 사용해 데이터를 다룰 수 있습니다. 
+     엄격한 transaction 처리를 필요로 하거나 명확한 데이터 구조를 보장받기를 원할 때 사용하기 좋지만, SCALE-UP만 가능해서 비용이 커질수 있습니다.
+
+     NoSQL은 비관계형 데이터 베이스로 정형과 비정형 데이터 모두 (텍스트, 비디오, 오디오, 이미지)를 저장할 수 있습니다. 
+     수평확장이 가능하기 때문에 방대한 양의 데이터를 저장해야 하거나, 정확한 데이터 구조를 알 수 없고 데이터가 변경/확장될 수 있는 시스템에 적합합니다.
      
   </details>
   
   <details>
   <summary> Redis에 대해서 간단히 설명해주세요.</summary>
      
+     인 메모리 기반의 고성능 key-value 구조의 데이터 스토어입니다. 
+     일반적인 데이터베이스는 하드 디스크나 SSD에 저장하는 반면, Redis는 메모리(RAM)에 저장해 디스크 스캐닝 과정이 필요없어 매우 빠릅니다.
+     
+     대표적인 특징으로는,
+     
+     1. 휘발성 메모리를 사용하므로(RAM) Snapshot, AOF방식으로 데이터 유실을 방지합니다.
+     2. String, Sets, Sorted Sets, Hashes, Lists의 다양한 자료 구조를 지원합니다.
+     3. 싱글 스레드로 동작하기 때문에 Thread Safe합니다.
+    
   </details>
   
   <details>
   <summary> Redis와 Memcached의 차이에 대해서 설명해주세요.</summary>
      
+     1. Memcached는 멀티스레드를 지원해서 멀티 프로세싱이 가능하나, Redis는 싱글 스레드 기반으로 동작합니다.
+     2. 데이터 축출 시 Memcached의 경우, LRU(Least Recently Used) 알고리즘만을 채택하고 있지만, Redis는 다양하고 미세한 방법을 제공합니다.
+     3. Memcached의 경우 문자열 데이터만 지원하나, Redis는 다양한 데이터 타입을 지원합니다.
+     4. Memcached의 경우 데이터를 영속화할 수 있는 기능이 없지만, Redis의 경우 AOF 기반으로 데이터를 영속화할 수 있습니다.
+     5. Redis에는 Memcached에는 없는 낙관적 락 기반의 트랜잭션, Replication(데이터 복제), Pub/Sub의 기능을 제공합니다.
+     
+     트래픽이 몰리는 상황이 자주 발생한다면 멀티 프로세싱 처리가 가능한 Memcached를, 다양한 자료구조가 필요하다면 Redis를 사용하는 것이 좋습니다.
      
   </details>
   
