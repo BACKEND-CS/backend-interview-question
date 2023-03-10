@@ -243,6 +243,23 @@
      
   </details>
   
+  <details>
+  <summary> Elastic Search에 대해서 간단히 설명해주세요.</summary>
+    
+     
+  </details>
+  <details>
+  <summary> Elastic Search의 인덱스구조와 RDBMS의 인덱스 구조의 차이에 대해 설명해주세요.</summary>
+    
+     
+  </details>
+  <details>
+  <summary> Elastic Search의 키워드 검색과 RDBMS의 LIKE 검색의 차이에 대해 설명해주세요.</summary>
+    
+     
+  </details>
+  
+  
 </details>
 
 
