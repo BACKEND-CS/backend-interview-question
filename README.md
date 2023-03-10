@@ -245,18 +245,33 @@
   
   <details>
   <summary> Elastic Search에 대해서 간단히 설명해주세요.</summary>
+     
+    자바로 개발된 오픈소스 검색엔진입니다. 단독으로 사용하기보다는 ELK 스택이라고 부르는 Logstash, Kibana를 추가적으로 사용합니다.
     
+    장점은 역색인 구조로 데이터를 저장해서 검색 성능이 뛰어납니다. 그리고, 샤드를 통해 scale-out할 수 있고, Replica로 데이터의 안정성을 보장할 수 있습니다.
+    정해진 스키마 개념이 없습니다.
+    
+    단점은 실시간 처리가 불가능하고, 트랜잭션과 롤백 같은 기능을 지원하지 않습니다.
      
   </details>
+  
   <details>
-  <summary> Elastic Search의 인덱스구조와 RDBMS의 인덱스 구조의 차이에 대해 설명해주세요.</summary>
+  <summary> Elastic Search의 인덱스 구조와 RDBMS의 인덱스 구조의 차이에 대해 설명해주세요.</summary>
     
-     
+    Elastic Search는 키워드를 통해 문서를 찾아내는 역색인 구조로 인덱스를 저장합니다.
+    RDBMS는 B-Tree와 그와 유사한 구조로 인덱스를 저장합니다.
+    
   </details>
+  
   <details>
   <summary> Elastic Search의 키워드 검색과 RDBMS의 LIKE 검색의 차이에 대해 설명해주세요.</summary>
     
-     
+    RDBMS의 경우 Full Scan을 테이블에 저장된 모든 데이터를 탐색하며 
+    해당 컬럼의 데이터가 주어진 패턴과 일치하는지 여부를 따져서 결과를 필터링하기 때문에 상대적으로 느립니다.
+    
+    Elastic Search는 텍스트를 term 단위로 쪼개서 생성하고, 이를 역 인덱스 목록에 대응되는 document를 저장하기 때문에 
+    검색 시 빠르게 검색할 수 있습니다.
+    
   </details>
   
   
