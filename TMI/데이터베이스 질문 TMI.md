@@ -1,6 +1,6 @@
 # 목차
 
-## 데이터베이스에서 인덱스를 사용하는 이유 및 장단점에 대해 설명해주세요.
+## 데이터베이스에서 인덱스를 사용하는 이유 및 장단점에 대해 설명해 주세요.
 
 <br>
 
@@ -44,7 +44,7 @@ RDBMS에서 데이터 조회 성능 향상을 위해 사용
    
 <br>
 
-## 트랜잭션에 대해서 설명해주세요.
+## 트랜잭션에 대해서 설명해 주세요.
 
 <br>
 
@@ -56,7 +56,7 @@ RDBMS에서 데이터 조회 성능 향상을 위해 사용
 
 <br>
 
-## ACID에 대해서 설명해주세요.
+## ACID에 대해서 설명해 주세요.
 
 <br>
 
@@ -86,7 +86,7 @@ ACID는 트랜잭션이 안전하게 수행된다는 것을 보장하기 위한 
 
 <br>
 
-## 트랜잭션 격리 수준(Transaction Isolation Levels)에 대해서 설명해주세요.
+## 트랜잭션 격리 수준(Transaction Isolation Levels)에 대해서 설명해 주세요.
 
 <br>
 
@@ -147,7 +147,7 @@ ACID는 트랜잭션이 안전하게 수행된다는 것을 보장하기 위한 
     
 <br>
 
-## 정규화에 대해서 설명해주세요.
+## 정규화에 대해서 설명해 주세요.
 
 <br>
 
@@ -195,6 +195,172 @@ ACID는 트랜잭션이 안전하게 수행된다는 것을 보장하기 위한 
     
     2. 키가 아닌 애트리뷰트들이 기본키에 직접 종속
 
+<br>
+
+## JOIN에 대해서 설명해 주세요
+
+<br>
+
+### ① 정의
+
+2개 이상의 테이블이나 데이터베이스를 연결하여 데이터를 검색하는 방법
+테이블을 연결하려면, 적어도 하나의 칼럼을 서로 공유하고 있어야 하므로 이를 이용하여 데이터 검색에 활용한다.
+
+### ② 종류
+
+- INNER JOIN
+    
+    교집합으로, 기준 테이블과 JOIN 테이블의 중복된 데이터를 보여준다.
+    
+    ```sql
+    SELECT
+    A.NAME, B.AGE
+    FROM EX_TABLE A
+    INNER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP
+    ```
+    
+    ![image](https://user-images.githubusercontent.com/85394884/225945448-82a5a1d1-7ef4-4157-9e4b-d8714d7c349a.png)
+    
+- LEFT OUTER JOIN
+    
+    기준 테이블값(왼쪽) + JOIN 테이블과의 중복된 값을 보여준다.
+    
+    ```sql
+    SELECT
+    A.NAME, B.AGE
+    FROM EX_TABLE A
+    LEFT OUTER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP
+    ```
+    
+    ![image](https://user-images.githubusercontent.com/85394884/225945674-a208d036-93ff-4e0d-b6be-e68d168384c6.png)
+    
+- RIGHT OUTER JOIN
+    
+    기준 테이블값(오른쪽) + JOIN 테이블과의 중복된 값을 보여준다.
+    
+    ```sql
+    SELECT
+    A.NAME, B.AGE
+    FROM EX_TABLE A
+    RIGHT OUTER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP
+    ```
+    
+    ![image](https://user-images.githubusercontent.com/85394884/225945957-ee18cef3-19ef-4476-99c3-c391ace710e3.png)
+    
+- FULL OUTER JOIN
+    
+    합집합으로, 기준 테이블과 JOIN 테이블의 모든 데이터를 가져온다.
+    
+    ```sql
+    SELECT
+    A.NAME, B.AGE
+    FROM EX_TABLE A
+    FULL OUTER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP
+    ```
+    
+    ![image](https://user-images.githubusercontent.com/85394884/225945788-31654505-410e-4bfb-aed1-402e6ab07943.png)
+    
+- CROSS JOIN
+    
+    한 쪽 테이블의 모든 행들과 다른 테이블의 모든 행을 조인한다.
+    
+    ```sql
+    SELECT
+    A.NAME, B.AGE
+    FROM EX_TABLE A
+    CROSS JOIN JOIN_TABLE B
+    ```
+    
+- SELF JOIN
+    
+    자기 자신을 JOIN한다.
+
+<br>
+
+## RDBMS vs NoSQL에 대해서 설명해 주세요.
+
+<br>
+
+- **RDBMS**
+    
+    장점
+    - 정해진 스키마에 따라 데이터를 저장해야 하므로 명확한 데이터 구조를 보장한다.
+    - 각 데이터를 중복없이 한 번만 저장할 수 있다.
+    
+    단점
+    - 테이블간의 관계가 존재하기 때문에 시스템이 커질 시, JOIN이 많은 복잡한 쿼리가 발생할 수 있다.
+    - 성능 향상을 위해서 scale-up만을 지원해 비용이 급격히 늘어날 수 있다.
+    - 스키마의 존재로 데이터가 유연성이 부족하다.
+
+- **NOSQL**
+    
+    장점
+    - 스키마가 없기 때문에 유연하며 자유로운 데이터 구조를 보장한다.
+    - 언제든 저장된 데이터를 조정하고 새로운 필드를 추가할 수 있다.
+    - 데이터 분산에 용이하며, 성능 향상을 위한 scale-up, scale-out 모두 가능하다.
+    
+    단점
+    - 데이터 중복이 발생할 수 있으며, 중복된 데이터 변경 시 모든 컬렉션에서 수정이 이루어져야 하는 번거로움이 있다.
+    - 스키마가 없기 때문에 명확한 데이터 구조를 보장하진 못한다.
+
+<br>
+
+## Redis에 대해서 간단히 설명해주세요.
+
+<br>
+
+### ① 정의
+
+인 메모리 기반의 고성능  key-value 데이터 구조 스토어
+
+→ 일반적인 데이터베이스는 하드 디스크나 SSD에 저장하는 반면, Redis는 메모리(RAM)에 저장해 디스크 스캐닝 과정이 필요없어 매우 빠르다.
+
+### ② Redis 영속성 보장 방법
+
+- Snapshot으로 특정 지점을 설정해 디스크에 백업한다.
+- AOF(Append Only File) :  (write/update) 쿼리들을 log파일에 저장해두고, 서버가 셧다운되면 재실행해서 다시 만들어 놓는다.
+
+### ③ 특징
+
+- 영속성을 지원하는 인 메모리 데이터 저장소
+- String, Sets, Sorted Sets, Hashes, Lists의 다양한 자료 구조를 지원한다.
+    - String : 가장 일반적인 key-value 구조의 형태
+    - Sets : String의 집합, 여러 개의 값을 하나의 value에 넣을 수 있음(ex. 포스트 태그)
+    - Sorted Sets : 정렬된 Set(ex. 랭킹 보드 서버 구현)
+    - Lists : array 형식의 데이터 구조
+- 싱글 스레드이기 때문에 한 번에 하나의 명령만 처리할 수 있다.(Thread Safe)
+    - 그렇기 때문에 중간에 처리 시간이 긴 명령어가 들어오면 그 뒤에 명령어들은 모두 앞에 있는 명령어가 처리될 때까지 대기한다.
+      (하지만 get, set 명령어의 경우 초당 10만 개 이상 처리할 수 있을 만큼 빠르다.)
+
+<br>
+
+## Redis와 Memcached의 차이에 대해서 설명해주세요.
+
+<br>
+
+### ① 공통점
+
+- 인 메모리 기반 cache
+- key-value 저장소
+- RAM에 데이터 저장
+
+### ② 차이점
+
+- Memcached는 멀티스레드를 지원해서 멀티 프로세싱이 가능하고, Redis는 싱글 스레드 기반으로 동작한다.
+- Memcached의 확장성은 scale-up을 통해서 얻을 수 있는 반면, Redis는 scale-out을 통해서 얻을 수 있다.
+- 데이터 축출 시 Memcached의 경우, LRU(Least Recently Used) 알고리즘만을 채택하고 있지만, Redis는 다양하고 미세한 방법을 제공한다.
+    - No Eviction : 데이터 축출 안하기 → 메모리 부족 시 에러 발생
+    - All Keys LRU : LRU에 근거하여 축출
+    - Volatile : LRU를 따르되, 만료 시점이 지정된ㄷ 것들에 한해서 축출 진행
+    - All Keys Random : 랜덤하게 키 삭제
+    - Volatile Random : 랜덤하게 키 삭제하되, 그 대상은 만료 시점이 지정된 것들로 한정
+    - Volatile TTL : TTL값을 기반으로, 만료시점이 빨리 도래하는 순서대로 삭제
+- Memcached의 경우 문자열 데이터만 지원하나, Redis는 다양한 데이터 타입을 지원한다.
+- Memcached의 경우 데이터를 영속화할 수 있는 기능이 없지만, Redis의 경우 AOF 기반으로 데이터를 영속화할 수 있다.
+- Redis는 낙관적 락 기반 트랜잭션을 지원한다.
+- Redis는 Replication(데이터 복제), Pub/Sub의 기능을 제공한다.
+
+<br>
 
 ## elastic search 에 대해서 간단히 설명해 주세요
 
@@ -243,6 +409,8 @@ Elastic Search는 Inverted-Index 구조로 데이터를 저장합니다. 찾으�
 <br>like 검색은 데이터가 늘어날수록 검색해야 할 대상이 늘어나 시간도 오래 걸리고, row 안의 내용을 모두 읽어야 하기 때문에 기본적으로 속도가 느리다. 특히 row 안의 내용이 길다면 하나의 row를 읽더라도 시간이 오래 걸린다.
 
 역색인을 사용하면 데이터가 늘어나도 찾아가야 할 행이 늘어나는 것이 아니라 역색인이 가리키는 id의 배열 값이 추가되는 것이므로 큰 속도의 저하 없이 여전히 빠른 속도로 검색이 가능하다.
+
+<br>
 
 ## MongoDB에 대해서 간단히 설명해주세요.
 
